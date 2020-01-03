@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: itemService
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+
+---
+server:
+  port: 8081
+spring:
+  profiles: item1
+
+---
+server:
+  port: 8091
+spring:
+  profiles: item2
